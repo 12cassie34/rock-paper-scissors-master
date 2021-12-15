@@ -1,8 +1,10 @@
 <script setup>
+import GameAndScoreVue from './components/GameAndScore.vue';
 </script>
 
 <template>
 <div class="container h-screen">
+  <GameAndScoreVue />
 </div>
 </template>
 
