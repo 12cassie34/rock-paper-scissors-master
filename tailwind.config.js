@@ -21,7 +21,7 @@ module.exports = {
         backgroundGradient: "hsl(237, 49%, 15%)"
       },
       fontFamily: {
-        barlow: ['"Barlow Semi Condensed"'],
+        barlow: ['"Barlow Semi Condensed"']
       },
     },
   },
