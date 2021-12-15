@@ -3,7 +3,8 @@ import { createStore } from 'vuex'
 const store = createStore({
   state () {
     return {
-      gameName: ""
+      gameName: "ROCK PAPER SCISSORS",
+      score: 12
     }
   },
   mutations: {
