@@ -3,7 +3,7 @@ import GameAndScoreVue from './components/GameAndScore.vue';
 </script>
 
 <template>
-<div class="container pt-8 h-screen">
+<div class="container pt-8 h-screen font-barlow">
   <GameAndScoreVue />
 </div>
 </template>
