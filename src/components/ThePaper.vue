@@ -1,6 +1,6 @@
 <template>
   <div
-    class="outer-border flex justify-center items-center w-36 h-36 rounded-full"
+    class="outer-border flex justify-center items-center w-36 h-36 rounded-full bg-blueGradient"
   >
     <div
       class="
@@ -21,8 +21,7 @@
 
 <style scoped>
 .outer-border {
-  background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%))
-    border-box;
+    box-shadow: 0px 11px 0px -5px hsl(229, 64%, 46%);
 }
 .inner-container {
   box-shadow: inset 0px 10px 0px -5px rgb(0 0 0 / 20%);
