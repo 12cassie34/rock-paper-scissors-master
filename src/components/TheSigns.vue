@@ -1,6 +1,14 @@
 <template>
   <div
-    class="outer-border flex justify-center items-center w-36 h-36 rounded-full"
+    class="
+      outer-border
+      flex
+      justify-center
+      items-center
+      w-32
+      h-32
+      rounded-full
+    "
     :class="sign.bgColor"
     :style="sign.shadowColor"
   >
@@ -11,8 +19,8 @@
         justify-center
         items-center
         bg-white
-        w-28
-        h-28
+        w-24
+        h-24
         rounded-full
       "
     >
@@ -27,9 +35,9 @@ export default {
     sign: Object,
   },
   setup(props) {
-      return {
-          props
-      }
+    return {
+      props,
+    };
   },
   mounted() {
     this.$nextTick(function () {

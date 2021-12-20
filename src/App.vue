@@ -4,7 +4,7 @@ import GameIntroductionVue from './components/GameIntroduction.vue';
 </script>
 
 <template>
-<div class="container pt-8 h-screen font-barlow">
+<div class="container pt-8 h-full font-barlow">
   <GameAndScoreVue />
   <GameIntroductionVue />
 </div>
