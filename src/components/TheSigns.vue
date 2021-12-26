@@ -24,7 +24,7 @@
         rounded-full
       "
     >
-      <img class="w-9" :id="`img-${sign.name}`" alt="Paper" />
+      <img class="w-9" :id="`img-${sign.name}`" :alt="sign.name" />
     </div>
   </div>
 </template>
