@@ -5,8 +5,8 @@
       flex
       justify-center
       items-center
-      w-32
-      h-32
+      w-28
+      h-28
       rounded-full
     "
     :class="sign.bgColor"
@@ -19,12 +19,12 @@
         justify-center
         items-center
         bg-white
-        w-24
-        h-24
+        w-20
+        h-20
         rounded-full
       "
     >
-      <img class="w-12" :id="`img-${sign.name}`" alt="Paper" />
+      <img class="w-9" :id="`img-${sign.name}`" alt="Paper" />
     </div>
   </div>
 </template>

@@ -1,16 +1,16 @@
 <template>
   <div
     class="
-    flex
-    justify-center
-    items-center
-    mx-auto
-    my-0
+      flex
+      justify-center
+      items-center
+      mt-40
+      mx-auto
       border border-solid border-white
       rounded
       h-10
       w-36
-      text-white text-xl
+      text-white text-base
       tracking-widest
     "
   >
