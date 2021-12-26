@@ -3,7 +3,7 @@ import TheSignsVue from "./TheSigns.vue";
 </script>
 
 <template>
-  <div class="relative my-28 h-96">
+  <div class="relative mt-28 mb-22 h-96">
     <TheSignsVue :sign="thePaper" class="absolute left-5 z-10" />
     <div class="line absolute bg-background w-28 h-3 left-32 top-16"></div>
     <TheSignsVue :sign="theScissors" class="absolute right-8 z-10" />
