@@ -11,7 +11,7 @@
     "
     :class="sign.bgColor"
     :style="sign.shadowColor"
-    @click="pickASign(sign.name)"
+    @click="pickASign(sign)"
   >
     <div
       class="
@@ -52,7 +52,9 @@ export default {
   },
   methods: {
     pickASign(sign) {
-      this.$store.commit("pickASign", sign)
+      if (!this.$store.getters.isGameStarted) {
+        this.$store.commit("pickASign", sign)
+      }
     }
   }
 };

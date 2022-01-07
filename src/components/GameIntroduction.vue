@@ -3,16 +3,7 @@ import TheSignsVue from "./TheSigns.vue";
 </script>
 
 <template>
-  <div
-    class="
-      relative
-      mt-24
-      mb-22
-      mx-auto
-      max-w-sm
-      h-80
-    "
-  >
+  <div class="relative mt-24 mb-22 mx-auto max-w-sm h-80">
     <TheSignsVue :sign="thePaper" class="absolute left-5 z-10" />
     <div class="line absolute bg-background w-32 h-3 left-32 top-16"></div>
     <TheSignsVue :sign="theScissors" class="absolute right-8 z-10" />
@@ -23,30 +14,18 @@ import TheSignsVue from "./TheSigns.vue";
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   setup() {},
   data() {
-    return {
-      thePaper: {
-        name: "paper",
-        image: "icon-paper.svg",
-        shadowColor: "box-shadow: 0px 11px 0px -5px hsl(229, 64%, 46%)",
-        bgColor: "bg-blueGradient",
-      },
-      theScissors: {
-        name: "scissors",
-        image: "icon-scissors.svg",
-        shadowColor: "box-shadow: 0px 11px 0px -5px hsl(39 90% 38%)",
-        bgColor: "bg-yellowGradient",
-      },
-      theRock: {
-        name: "rock",
-        image: "icon-rock.svg",
-        shadowColor: "box-shadow: 0px 11px 0px -5px hsl(349, 71%, 52%)",
-        bgColor: "bg-redGradient",
-      },
-    };
+    return {};
   },
+  computed: mapState({
+    thePaper: (state) => state.signs.thePaper,
+    theScissors: (state) => state.signs.theScissors,
+    theRock: (state) => state.signs.theRock,
+  }),
 };
 </script>
 
