@@ -11,6 +11,7 @@
     "
     :class="sign.bgColor"
     :style="sign.shadowColor"
+    @click="pickASign(sign.name)"
   >
     <div
       class="
@@ -49,5 +50,10 @@ export default {
       document.getElementById(`img-${this.props.sign.name}`).src = imgUrl;
     });
   },
+  methods: {
+    pickASign(sign) {
+      this.$store.commit("pickASign", sign)
+    }
+  }
 };
 </script>

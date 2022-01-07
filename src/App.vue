@@ -2,15 +2,27 @@
 import GameAndScore from './components/GameAndScore.vue';
 import GameIntroduction from './components/GameIntroduction.vue';
 import TheRules from "./components/TheRules.vue";
+import GameStartBoard from './components/GameStartBoard.vue';
 </script>
 
 <template>
 <div class="container pt-8 pb-5 h-full bg-background font-barlow">
   <GameAndScore />
-  <GameIntroduction />
+  <GameIntroduction v-if="!isGameStarted" />
+  <GameStartBoard v-else />
   <TheRules />
 </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    isGameStarted() {
+      return this.$store.getters.isGameStarted;
+    }
+  }
+}
+</script>
 
 <style>
 .inner-container {
