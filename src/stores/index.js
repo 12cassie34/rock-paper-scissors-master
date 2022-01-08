@@ -34,20 +34,51 @@ const store = createStore({
       if (state.yourSign !== "") return true;
       return false;
     },
+    gameResult(state) {
+      const paper = {
+        paper: "tie",
+        scissors: "lose",
+        rock: "win",
+      };
+      const scissors = {
+        paper: "win",
+        scissors: "tie",
+        rock: "lose",
+      };
+      const rock = {
+        paper: "lose",
+        scissors: "win",
+        rock: "tie",
+      };
+
+      switch (state.yourSign.name) {
+        case "paper":
+          return paper[state.houseSign.name];
+        case "scissors":
+          return scissors[state.houseSign.name];
+        case "rock":
+          return rock[state.houseSign.name];
+        default:
+          return null;
+      }
+    },
   },
   mutations: {
     changeGameName(state, game) {
       state.gameName = game;
     },
     pickASign(state, sign) {
-      sign.name = `${sign.name}-your-sign`;
       state.yourSign = sign;
     },
     houseSign(state) {
       const signArr = Object.keys(state.signs);
-      const signKey = signArr[Math.floor(Math.random()*signArr.length)];
+      const signKey = signArr[Math.floor(Math.random() * signArr.length)];
       state.houseSign = state.signs[signKey];
     },
+    addScore(state) {
+      console.log("fire");
+      state.score += 1;
+    }
   },
 });
 

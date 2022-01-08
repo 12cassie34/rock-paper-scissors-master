@@ -25,7 +25,7 @@
         rounded-full
       "
     >
-      <img class="w-9" :id="`img-${sign.name}`" :alt="sign.name" />
+      <img class="w-9" :class="`img-${sign.name}`" :alt="sign.name" />
     </div>
   </div>
 </template>
@@ -47,7 +47,10 @@ export default {
         import.meta.url
       ).href;
 
-      document.getElementById(`img-${this.props.sign.name}`).src = imgUrl;
+      const imgList = document.getElementsByClassName(`img-${this.props.sign.name}`);
+      for (let img of imgList) {
+          img.src= imgUrl;
+      }
     });
   },
   methods: {
