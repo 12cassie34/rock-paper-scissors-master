@@ -7,6 +7,11 @@ import TheSignsVue from "./TheSigns.vue";
     <div>
       <div class="relative">
         <TheSignsVue :sign="yourSign" class="absolute left-5 z-10" />
+        <div class="your-sign-bg-container absolute left-5 z-0">
+          <div class="your-sign-bg absolute bg-dark opacity-60 w-40 h-40"></div>
+          <div class="your-sign-bg absolute bg-dark opacity-40 w-60 h-60"></div>
+          <div class="your-sign-bg absolute bg-dark opacity-20 w-80 h-80"></div>
+        </div>
         <h2
           class="
             absolute
@@ -46,7 +51,7 @@ import TheSignsVue from "./TheSigns.vue";
     </div>
     <div
       v-show="showHousePicked"
-      class="absolute flex flex-col justify-center mt-48 w-full"
+      class="absolute flex flex-col justify-center mt-60 w-full"
     >
       <h1 class="uppercase text-center text-white text-5xl">
         You {{ $store.getters.gameResult }}
@@ -88,11 +93,14 @@ export default {
     this.$nextTick(function () {
       setTimeout(() => {
         this.showHousePicked = true;
+        if (this.gameResult === "win") {
+          this.$store.commit("addScore");
+        }
+        if (this.gameResult === "lose") {
+          this.$store.commit("loseScore");
+        }
       }, 2000);
     });
-    if (this.gameResult === "win") {
-      this.$store.commit("addScore")
-    }
   },
   computed: {
     ...mapState({
@@ -101,12 +109,33 @@ export default {
     }),
     gameResult() {
       return this.$store.getters.gameResult;
-    }
+    },
   },
   methods: {
     playAgain() {
-      this.$store.commit("pickASign", "")
-    }
-  }
+      this.$store.commit("pickASign", "");
+    },
+  },
 };
 </script>
+
+<style scoped>
+.your-sign-bg-container .your-sign-bg:first-child {
+  left: -1.4rem;
+  top: -1.4rem;
+}
+
+.your-sign-bg-container .your-sign-bg:nth-child(2) {
+  left: -4rem;
+  top: -4rem;
+}
+
+.your-sign-bg-container .your-sign-bg:last-child {
+  left: -6rem;
+  top: -6rem;
+}
+
+.your-sign-bg {
+  border-radius: 50%;
+}
+</style>

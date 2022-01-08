@@ -76,8 +76,10 @@ const store = createStore({
       state.houseSign = state.signs[signKey];
     },
     addScore(state) {
-      console.log("fire");
       state.score += 1;
+    },
+    loseScore(state) {
+      state.score -= 1;
     }
   },
 });
