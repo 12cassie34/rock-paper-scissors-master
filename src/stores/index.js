@@ -79,7 +79,9 @@ const store = createStore({
       state.score += 1;
     },
     loseScore(state) {
-      state.score -= 1;
+      if (state.score > 0) {
+        state.score -= 1;
+      }
     }
   },
 });
