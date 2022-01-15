@@ -1,6 +1,7 @@
 <template>
   <div
     class="
+      sign-container
       outer-border
       flex
       justify-center
@@ -11,7 +12,7 @@
       cursor-pointer
       lg:w-32 lg:h-32
     "
-    :class="sign.bgColor"
+    :class="[sign.bgColor, { 'game-started': isGameStarted }]"
     :style="sign.shadowColor"
     @click="pickASign(sign)"
   >
@@ -43,6 +44,11 @@ export default {
       props,
     };
   },
+  computed: {
+    isGameStarted() {
+      return this.$store.getters.isGameStarted;
+    }
+  },
   mounted() {
     this.$nextTick(function () {
       const imgUrl = new URL(
@@ -67,3 +73,20 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.sign-container.game-started {
+    width: 12rem;
+    height: 12rem;
+}
+
+.sign-container.game-started .inner-container {
+    width: 10rem;
+    height: 10rem;
+}
+
+.sign-container.game-started img {
+    width: 5rem;
+    height: 5rem;
+}
+</style>
