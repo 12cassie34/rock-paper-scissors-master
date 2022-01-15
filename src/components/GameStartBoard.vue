@@ -134,6 +134,7 @@ import TheSignsVue from "./TheSigns.vue";
             text-dark
             uppercase
             tracking-widest
+            hover:text-red
           "
         >
           play again
