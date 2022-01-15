@@ -8,6 +8,8 @@
       w-28
       h-28
       rounded-full
+      cursor-pointer
+      lg:w-32 lg:h-32
     "
     :class="sign.bgColor"
     :style="sign.shadowColor"
@@ -23,9 +25,10 @@
         w-20
         h-20
         rounded-full
+        lg:w-24 lg:h-24
       "
     >
-      <img class="w-9" :class="`img-${sign.name}`" :alt="sign.name" />
+      <img class="w-9 lg:w-12" :class="`img-${sign.name}`" :alt="sign.name" />
     </div>
   </div>
 </template>
@@ -47,18 +50,20 @@ export default {
         import.meta.url
       ).href;
 
-      const imgList = document.getElementsByClassName(`img-${this.props.sign.name}`);
+      const imgList = document.getElementsByClassName(
+        `img-${this.props.sign.name}`
+      );
       for (let img of imgList) {
-          img.src= imgUrl;
+        img.src = imgUrl;
       }
     });
   },
   methods: {
     pickASign(sign) {
       if (!this.$store.getters.isGameStarted) {
-        this.$store.commit("pickASign", sign)
+        this.$store.commit("pickASign", sign);
       }
-    }
-  }
+    },
+  },
 };
 </script>
