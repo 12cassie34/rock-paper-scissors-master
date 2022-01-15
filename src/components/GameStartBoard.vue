@@ -7,10 +7,14 @@ import TheSignsVue from "./TheSigns.vue";
     <div>
       <div class="relative">
         <TheSignsVue :sign="yourSign" class="absolute left-5 z-10" />
-        <div class="your-sign-bg-container absolute left-5 z-0">
-          <div class="your-sign-bg absolute bg-dark opacity-60 w-40 h-40"></div>
-          <div class="your-sign-bg absolute bg-dark opacity-40 w-60 h-60"></div>
-          <div class="your-sign-bg absolute bg-dark opacity-20 w-80 h-80"></div>
+        <div
+          v-if="gameResult === 'win'"
+          v-show="showHousePicked"
+          class="sign-bg-container absolute left-5 z-0"
+        >
+          <div class="sign-bg absolute bg-dark opacity-60 w-40 h-40"></div>
+          <div class="sign-bg absolute bg-dark opacity-40 w-60 h-60"></div>
+          <div class="sign-bg absolute bg-dark opacity-20 w-80 h-80"></div>
         </div>
         <h2
           class="
@@ -35,6 +39,15 @@ import TheSignsVue from "./TheSigns.vue";
           :sign="houseSign"
           class="absolute right-8 z-10"
         />
+        <div
+          v-if="gameResult === 'lose'"
+          v-show="showHousePicked"
+          class="sign-bg-container absolute left-60 z-0"
+        >
+          <div class="sign-bg absolute bg-dark opacity-60 w-40 h-40"></div>
+          <div class="sign-bg absolute bg-dark opacity-40 w-60 h-60"></div>
+          <div class="sign-bg absolute bg-dark opacity-20 w-80 h-80"></div>
+        </div>
         <h2
           class="
             absolute
@@ -120,22 +133,22 @@ export default {
 </script>
 
 <style scoped>
-.your-sign-bg-container .your-sign-bg:first-child {
+.sign-bg-container .sign-bg:first-child {
   left: -1.4rem;
   top: -1.4rem;
 }
 
-.your-sign-bg-container .your-sign-bg:nth-child(2) {
+.sign-bg-container .sign-bg:nth-child(2) {
   left: -4rem;
   top: -4rem;
 }
 
-.your-sign-bg-container .your-sign-bg:last-child {
+.sign-bg-container .sign-bg:last-child {
   left: -6rem;
   top: -6rem;
 }
 
-.your-sign-bg {
+.sign-bg {
   border-radius: 50%;
 }
 </style>
