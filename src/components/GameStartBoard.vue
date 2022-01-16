@@ -63,16 +63,7 @@ import TheSignsVue from "./TheSigns.vue";
       >
         <div
           v-show="!showHousePicked"
-          class="
-            absolute
-            right-8
-            z-10
-            bg-dark
-            w-28
-            h-28
-            rounded-full
-            lg:w-48 lg:h-48
-          "
+          class="absolute right-8 z-10 bg-dark w-28 h-28 rounded-full lg:w-48 lg:h-48"
         ></div>
         <TheSignsVue
           v-show="showHousePicked"
@@ -196,6 +187,25 @@ export default {
 </script>
 
 <style scoped>
+.sign-bg-container .sign-bg:first-child {
+  left: -1.4rem;
+  top: -1.4rem;
+}
+
+.sign-bg-container .sign-bg:nth-child(2) {
+  left: -4rem;
+  top: -4rem;
+}
+
+.sign-bg-container .sign-bg:last-child {
+  left: -6rem;
+  top: -6rem;
+}
+
+.sign-bg {
+  border-radius: 50%;
+}
+
 @media (min-width: 1024px) {
   .your-picked {
     left: -2rem;
@@ -227,39 +237,21 @@ export default {
     left: -3rem;
   }
 
-  .sign-bg-container .sign-bg[data-v-3fb7e734]:first-child {
+  .sign-bg-container .sign-bg:first-child {
     left: -0.9rem;
     top: -1.7rem;
   }
 
-  .sign-bg-container .sign-bg[data-v-3fb7e734]:nth-child(2) {
+  .sign-bg-container .sign-bg:nth-child(2) {
     left: -5rem;
     top: -5.5rem;
   }
 
-  .sign-bg-container .sign-bg[data-v-3fb7e734]:last-child {
+  .sign-bg-container .sign-bg:last-child {
     left: -8rem;
     top: -8rem;
     width: 30rem;
     height: 30rem;
   }
-}
-.sign-bg-container .sign-bg:first-child {
-  left: -1.4rem;
-  top: -1.4rem;
-}
-
-.sign-bg-container .sign-bg:nth-child(2) {
-  left: -4rem;
-  top: -4rem;
-}
-
-.sign-bg-container .sign-bg:last-child {
-  left: -6rem;
-  top: -6rem;
-}
-
-.sign-bg {
-  border-radius: 50%;
 }
 </style>
