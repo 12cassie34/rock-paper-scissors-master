@@ -1,20 +1,23 @@
 # Frontend Mentor - Rock, Paper, Scissors solution
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+### Links
+
+- Solution URL: [12cassie34/rock-paper-scissors-master](https://github.com/12cassie34/rock-paper-scissors-master)
+- Live Site URL: [Live Demo](https://12cassie34.github.io/rock-paper-scissors-master/)
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -24,25 +27,22 @@ Users should be able to:
 
 - View the optimal layout for the game depending on their device's screen size
 - Play Rock, Paper, Scissors against the computer
-- Maintain the state of the score after refreshing the browser _(optional)_
-- **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 ### Screenshot
-
-To de added.
-![](./screenshot.jpg)
-
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+![](https://i.imgur.com/fbiNylx.png)
+![](https://i.imgur.com/O3Uhkj6.png)
+![](https://i.imgur.com/aRo0wHv.png)
+![](https://i.imgur.com/V2A1bn4.png)
+![](https://i.imgur.com/wg0scdb.png)
 
 ## My process
 
 ### Built with
 
-- [Vue](https://vuejs.org/) - JS library - Vue 3
+- Semantic HTML5 markup
+- Mobile-first workflow
+- [Vue 3](https://vuejs.org/) - JS library
+- [Vuex](https://vuex.vuejs.org/guide/) - Vue framework for state storage
 - [Tailwind CSS](https://tailwindcss.com/) - For styles
 
 ### What I learned
@@ -63,8 +63,6 @@ Use `box-shadow` to make the 3D effect.
 
 ## Author
 
-- Website - [Cassie](https://medium.com/@cassiecoding)
+- Medium - [Cassie](https://medium.com/@cassiecoding)
 - Frontend Mentor - [@12cassie34](https://www.frontendmentor.io/profile/12cassie34)
-
-
-## Acknowledgments
+- Cake Resume - [@SHANYU LIN](https://www.cakeresume.com/me/shanyu-lin)
