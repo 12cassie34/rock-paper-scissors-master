@@ -47,7 +47,7 @@ export default {
   computed: {
     isGameStarted() {
       return this.$store.getters.isGameStarted;
-    }
+    },
   },
   mounted() {
     this.$nextTick(function () {
@@ -75,18 +75,20 @@ export default {
 </script>
 
 <style scoped>
-.sign-container.game-started {
+@media (min-width: 1024px) {
+  .sign-container.game-started {
     width: 12rem;
     height: 12rem;
-}
+  }
 
-.sign-container.game-started .inner-container {
+  .sign-container.game-started .inner-container {
     width: 10rem;
     height: 10rem;
-}
+  }
 
-.sign-container.game-started img {
+  .sign-container.game-started img {
     width: 5rem;
     height: 5rem;
+  }
 }
 </style>
